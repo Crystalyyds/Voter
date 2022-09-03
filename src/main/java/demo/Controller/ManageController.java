@@ -33,6 +33,7 @@ public class ManageController {
                     manageService.showAll(voteArray);
                     break;
                 case 3 :
+                    manageService.changeTime(voteArray);
                     break;
                 case 4 :
                     TicketController ticketController = new TicketController();

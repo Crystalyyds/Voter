@@ -58,11 +58,14 @@ public class ManageService {
         }
     }
 
-    public void changeTime(ArrayList<Vote> voteArray,String name){
+    public void changeTime(ArrayList<Vote> voteArray){
+        showAll(voteArray);
+        System.out.println("输入修改人信息");
+        Scanner scanner = new Scanner(System.in);
+        String name = scanner.nextLine();
         for (Vote vote : voteArray) {
             if (vote.getName()==name){
                 System.out.println(vote.getName()+"的初始时间是"+vote.getTime());
-                Scanner scanner = ScannerSingleton.getInstance();
                 System.out.println("现在开始修改,输入修改时间");
                 String time = scanner.next();
                 vote.setTime(time);
